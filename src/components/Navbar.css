@@ -1,0 +1,114 @@
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-logo {
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-item {
+    margin: 0;
+}
+
+.navbar-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-link:hover {
+    color: #ff6347;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+.navbar-menu.show {
+    display: flex;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 80vw;
+    max-width: 300px;
+    height: 60vh;
+    max-height: 400px;
+    background-color: #333;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    border-radius: 8px;
+    overflow: auto;
+}
+
+.navbar-menu.show .navbar-item {
+    margin: 0;
+}
+
+/* Add this CSS for the close button */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-button:hover {
+    color: #ff6347;
+}
+
+@media (max-width: 768px) {
+    .navbar-menu {
+        display: none;
+        text-align: center;
+    }
+
+    .navbar-item {
+        margin: 10px 0;
+    }
+
+    .navbar-link {
+        font-size: 1.2rem;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}

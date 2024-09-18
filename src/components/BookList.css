@@ -1,0 +1,125 @@
+.book-list-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.book-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.book-item {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.book-item:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+}
+
+.book-image {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: 10px;
+}
+
+.book-image img {
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+}
+
+.book-details {
+    padding: 15px;
+    text-align: center;
+    ;
+}
+
+.book-title {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.book-author,
+.book-rating {
+    margin: 4px;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.book-rating {
+    color: #ffb800;
+}
+
+.no-books {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #999;
+}
+
+.book-link {
+    text-decoration: none;
+    /* Remove underline */
+    color: inherit;
+    /* Use the color from parent element */
+    display: block;
+    /* Make the entire card clickable */
+}
+
+@supports not (display: grid) {
+    .book-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .book-item {
+        flex: 1 1 calc(25% - 20px);
+    }
+}
+
+/* Responsive layout adjustments */
+@media (max-width: 1200px) {
+    .book-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .book-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .book-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .book-item {
+        width: 90%;
+        /* Adjust width for smaller screens */
+        margin: 0 auto;
+        /* Center item horizontally */
+    }
+
+
+}

@@ -1,0 +1,160 @@
+/* Container */
+.auth-container {
+    max-width: 900px;
+    min-height: 500px;
+    margin: 50px auto;
+    padding: 40px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    height: auto;
+    /* Adjust height for responsiveness */
+    overflow: hidden;
+    transition: transform 0.5s ease;
+}
+
+/* Image */
+.auth-image {
+    width: 70%;
+    background-size: cover;
+    transition: transform 0.5s ease;
+}
+
+.reg-img {
+    background: url('https://www.speld.org.nz/wp-content/uploads/2018/01/man-reading-book.jpg') no-repeat center center;
+}
+
+.log-img {
+    background: url('https://th.bing.com/th/id/OIP.hWKpOKs7K5BtEFE4RuEL2wHaEK?rs=1&pid=ImgDetMain') no-repeat center center;
+}
+
+/* Form */
+.auth-form {
+    width: 50%;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    transition: transform 0.5s ease;
+}
+
+/* Title */
+.auth-container h2 {
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+}
+
+/* Form */
+.auth-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Labels */
+.auth-container label {
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #555;
+    text-align: left;
+}
+
+/* Inputs */
+.auth-container input {
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: #f7f7f7;
+    transition: all 0.3s ease;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.auth-container input:focus {
+    border-color: #007bff;
+    background-color: #fff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+}
+
+/* Button */
+.auth-container button {
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    text-align: center;
+}
+
+.auth-container button:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+}
+
+.auth-container button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Error Message */
+.auth-container .error {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 16px;
+    text-align: left;
+}
+
+/* Toggle Text */
+.auth-toggle-text {
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.auth-toggle-link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.auth-toggle-link:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design for Mobile Devices */
+@media (max-width: 768px) {
+    .auth-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .auth-image {
+        display: none;
+        /* Hide image on small screens */
+        width: 100%;
+        background-size: cover;
+    }
+
+    .auth-form {
+        width: 90%;
+        /* Ensure form takes full width */
+        transform: translateX(0%);
+        /* Ensure no extra translation */
+    }
+}
+
+@media (max-width: 480px) {
+    .auth-container {
+        padding: 20px;
+    }
+}
