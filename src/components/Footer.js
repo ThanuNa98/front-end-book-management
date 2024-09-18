@@ -1,11 +1,11 @@
 import React from 'react';
-import './Footer.css'; // Import the CSS file for styling
+import './Footer.css';
 
 const Footer = () => {
     return (
         <footer className="footer">
             <div className="footer-bottom">
-                <p>&copy; {new Date().getFullYear()} Your Company Name. All rights reserved.</p>
+                <p>&copy; {new Date().getFullYear()} Mongo Books. All rights reserved.</p>
             </div>
         </footer>
     );
